@@ -9,7 +9,10 @@ Skills Bot is an AI-powered resume retrieval and analysis system that allows use
 - AI-powered insights: Uses ChatGroq to generate structured responses based on retrieved resume sections.  
 - Environment management: Uses dotenv for secure API key handling.  
 
-## Setup & Installation  
+## Workflow  
+![Workflow](Workflow.png)  
+
+## Setup & Installation   
 
 ### Prerequisites  
 Ensure you have the following installed:  
