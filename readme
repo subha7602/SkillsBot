@@ -1,0 +1,64 @@
+# Skills Bot
+
+## Overview
+Skills Bot is an AI-powered resume retrieval and analysis system that allows users to search for candidates based on specific skills and experience. It leverages **FAISS** for vector-based resume search and **ChatGroq** for generating structured responses from retrieved resume data.
+
+## Features
+- **Automated Resume Processing**: Extracts text from PDFs and splits it into meaningful chunks.
+- **FAISS Vector Search**: Enables fast and efficient retrieval of relevant resumes.
+- **AI-Powered Insights**: Uses ChatGroq to generate structured responses based on retrieved resume sections.
+- **Environment Management**: Uses `dotenv` for secure API key handling.
+
+## Setup & Installation
+### Prerequisites
+Ensure you have the following installed:
+- Python 3.8+
+- `pip` package manager
+- `virtualenv` (optional but recommended)
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Environment Variables
+Create a `.env` file and add your **Groq API key**:
+```env
+GROQ_API_KEY=your_api_key_here
+```
+
+## Usage
+### 1. Create Resume Vector Store
+Run the script to process resumes and generate a FAISS index:
+```bash
+python vector_store.py
+```
+
+### 2. Query Resumes
+To retrieve relevant resumes based on a user query:
+```python
+from query import query_resumes
+response = query_resumes("Find candidates with AWS and Python experience")
+print(response)
+```
+
+## Technologies Used
+- **LangChain**: For document processing and AI-based responses.
+- **FAISS**: For efficient similarity search.
+- **Hugging Face Embeddings**: Converts text into vector embeddings.
+- **ChatGroq (Mixtral-8x7b-32768)**: Generates structured AI responses.
+
+## Future Enhancements
+- Add support for **Docx** and **TXT** resumes.
+- Implement a **web-based UI** for easier interaction.
+- Improve query processing with **fine-tuned LLMs**.
+
+## License
+This project is licensed under the MIT License.
+
+## Author
+**Subhashini SV**
+
+## Date
+**February 10, 2025**
+
